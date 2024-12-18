@@ -1,0 +1,302 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 56px;
+}
+
+:root {
+    --gold-dark: #B8860B; /* Dark Gold */
+    --gold-medium: #DAA520; /* Golden Rod */
+    --gold-light: #FFD700; /* Gold */
+    --gold-pale: #FFF8DC; /* Cornsilk */
+    --gold-fade: rgba(184, 134, 11, 0.1); /* Light Gold Background */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(184, 134, 11, 0.7), rgba(184, 134, 11, 0.7)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(transparent, var(--gold-pale));
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn-primary {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-dark {
+    background-color: var(--gold-dark) !important;
+}
+
+/* Section Headers */
+section h2 {
+    color: var(--gold-dark);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+section h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--gold-medium);
+    margin: 10px auto;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 2px 15px rgba(184, 134, 11, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(184, 134, 11, 0.2);
+}
+
+.card-body {
+    border-top: 3px solid var(--gold-light);
+}
+
+/* Gallery Section */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(184, 134, 11, 0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Gallery */
+.gallery img {
+    transition: transform 0.3s;
+    cursor: pointer;
+    border: 2px solid var(--gold-fade);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: var(--gold-medium);
+}
+
+@media (max-width: 768px) {
+    .gallery-item img {
+        height: 200px;
+    }
+    .hero-section {
+        min-height: 400px;
+    }
+}
+
+/* Contact Form */
+.contact-info {
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(184, 134, 11, 0.1);
+}
+
+.contact-info i {
+    color: var(--gold-dark);
+}
+
+.form-control:focus {
+    border-color: var(--gold-medium);
+    box-shadow: 0 0 0 0.2rem rgba(184, 134, 11, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--gold-dark) !important;
+    border-color: var(--gold-dark) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-medium) !important;
+    border-color: var(--gold-medium) !important;
+}
+
+/* About Section */
+#about .card {
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+#about .card:hover {
+    transform: translateY(-5px);
+}
+
+#about .card-title {
+    color: var(--gold-dark);
+    font-weight: bold;
+}
+
+#about h4 {
+    color: var(--gold-medium);
+    font-weight: 600;
+}
+
+#about .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#about p {
+    line-height: 1.7;
+    color: #666;
+}
+
+#about .card-body {
+    padding: 2rem;
+}
+
+/* Facilities Section */
+.card-title[data-bs-toggle="collapse"] {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-title[data-bs-toggle="collapse"]:hover {
+    color: var(--gold-medium);
+}
+
+.card-title .fa-chevron-down {
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.card-title[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.collapse {
+    border-top: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.list-unstyled li:hover {
+    color: var(--gold-dark);
+}
+
+.list-unstyled li i {
+    color: var(--gold-medium);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    background-color: var(--gold-dark) !important;
+    padding: 2rem 0;
+    position: relative;
+}
+
+footer p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+/* Add a subtle gradient to the footer */
+footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--gold-light), var(--gold-medium), var(--gold-light));
+}
+
+/* Custom Backgrounds */
+.bg-gold-light {
+    background-color: var(--gold-pale) !important;
+}
