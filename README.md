@@ -33,6 +33,9 @@ cd tamil-meena-marriage-hall
 
 3. Open `index.html` in your browser
 
+To view the live site , click on this url Your site is live at https://rathi-dev.github.io/-tamil-meena-marriage-hall/
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
